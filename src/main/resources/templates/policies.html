@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Insurance Policies</title>
+</head>
+<body>
+
+<h2>Insurance Policies</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Policy Number</th>
+        <th>Holder Name</th>
+        <th>Type</th>
+        <th>Premium</th>
+    </tr>
+
+    <tr th:each="policy : ${policies}">
+        <td th:text="${policy.id}"></td>
+        <td th:text="${policy.policyNumber}"></td>
+        <td th:text="${policy.policyHolderName}"></td>
+        <td th:text="${policy.policyType}"></td>
+        <td th:text="${policy.premiumAmount}"></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
